@@ -9,6 +9,5 @@ RUN rpm-ostree override remove firefox firefox-langpacks gnome-terminal gnome-te
     rm -rf /usr/share/gnome-shell/extensions/background-logo@fedorahosted.org && \
     sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=check/' /etc/rpm-ostreed.conf && \
     systemctl enable rpm-ostreed-automatic.timer && \
-    systemctl enable flatpak-automatic.timer && \
     rpm-ostree cleanup -m && \
     ostree container commit
