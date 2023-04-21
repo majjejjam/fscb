@@ -2,7 +2,7 @@
 This is a custom build of Fedora Silverblue 38, removing certain
 features, adding others, according to my personas preference.
 
-** Intstallation
+** Installation
 Running Fedora Silverblue, you should be able to try this build by
 issuing the following command:
 #+begin_src bash
