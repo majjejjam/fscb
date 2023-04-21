@@ -20,6 +20,7 @@ on:
 
 env:
   IMAGE_NAME: ${{ github.event.repository.name }}
+  IMAGE_TAGS: latest ${{ github.sha }}
   GITHUB_USERNAME: ${{ github.repository_owner }}
   GITHUB_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
   IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
@@ -54,14 +55,14 @@ jobs:
           containerfiles: |
             ./Containerfile
           image: ${{ env.IMAGE_NAME }}
-          tags: latest ${{ github.sha }}
+          tags: ${{ env.IMAGE_TAGS }}
           oci: true
 
       - name: Push to container registries
         id: push
         uses: redhat-actions/push-to-registry@v2
         with:
-          image: $${{ steps.build.outputs.image }}
+          image: ${{ steps.build.outputs.image }}
           tags: ${{ steps.build.outputs.tags }}
           registry: ${{ env.IMAGE_REGISTRY }}
           username: ${{ env.REGISTRY_USER }}
