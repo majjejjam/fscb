@@ -1,0 +1,21 @@
+* Fedora Silverblue Custom Build
+This is a custom build of Fedora Silverblue 38, removing certain
+features, adding others, according to my personas preference.
+
+** Intstallation
+Running Fedora Silverblue, you should be able to try this build by
+issuing the following command:
+#+begin_src bash
+  sudo rpm-ostree rebase --experimental ostree-unverified-registry:ghcr.io/majjejjam/fscb:latest
+#+end_src
+
+** Features
+- Add =gnome-tweaks=
+- Replace =rpm=-version of Firefox with Flatpak
+- Replace GNOME Terminal with Console
+- Remove Fedora watermark
+- Add several Flatpaks I use regurarly
+- Setup automatic system and Flatpak updates
+
+** Based upon
+- [[https://github.com/aguslr/bluevanilla][BlueVanilla]]
