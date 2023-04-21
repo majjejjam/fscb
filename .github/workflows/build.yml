@@ -19,6 +19,7 @@ on:
       - '*.txt'
 
 env:
+  IMAGE_NAME: ${{ github.event.repository.name }}
   GITHUB_USERNAME: ${{ github.repository_owner }}
   GITHUB_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
   IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
@@ -52,6 +53,7 @@ jobs:
         with:
           containerfiles: |
             ./Containerfile
+          image: ${{ env.IMAGE_NAME }}
           tags: latest ${{ github.sha }}
           oci: true
 
