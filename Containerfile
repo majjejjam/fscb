@@ -2,7 +2,7 @@ ARG FEDORA_MAJOR_VERSION=37
 
 FROM quay.io/fedora-ostree-desktops/silverblue:${FEDORA_MAJOR_VERSION}
 
-RUN rpm-ostree install gnome-tweaks gnome-consoleflatpak -h && \
+RUN rpm-ostree install gnome-tweaks gnome-console -h && \
     rpm-ostree override remove firefox firefox-langpacks gnome-terminal && \
     flatpak install -y --user \\
     org.mozilla.firefox \\
