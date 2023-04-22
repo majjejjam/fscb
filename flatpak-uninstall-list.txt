@@ -1,1 +1,3 @@
-
+org.gnome.Connections
+org.gnome.Extensions
+org.gnome.eog
