@@ -37,16 +37,6 @@ binding='<Shift><Super>Return'
 command='kgx'
 name='Öppna terminalen'
 
-[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
-binding='<Super>c'
-command="emacsclient -nc -F '(quote (name . \"capture\"))' -e '(activate-capture-frame)'"
-name='Capture'
-
-[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2]
-binding='<Shift><Super>m'
-command="emacsclient -nc -F '(quote (name . \"capture\"))' -e '(activate-roam-capture-frame)'"
-name='Org Roam Capture'
-
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3]
 binding='<Super>Return'
 command='gtk-launch emacsclient'
