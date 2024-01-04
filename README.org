@@ -12,7 +12,7 @@ issuing the following command:
 ** Features
 - Add =gnome-tweaks=
 - Replace =rpm=-version of Firefox with Flatpak
-- Replace GNOME Terminal with Console
+- Replace GNOME Terminal with Prompt
 - Remove Fedora watermark
 - Add several Flatpaks I use regurarly (not working yet)
 - Setup automatic system and Flatpak updates
