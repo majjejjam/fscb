@@ -1,5 +1,5 @@
 * Fedora Silverblue Custom Build
-This is a custom build of Fedora Silverblue 38, removing certain
+This is a custom build of Fedora Silverblue 39, removing certain
 features, adding others, according to my personas preference.
 
 ** Installation
@@ -15,7 +15,7 @@ issuing the following command:
 - Replace GNOME Terminal with Prompt
 - Remove Fedora watermark
 - Add several Flatpaks I use regurarly (not working yet)
-- Setup automatic system and Flatpak updates
+- Setup automatic system and Flatpak updates (not working yet)
 
 ** Based upon
 - [[https://github.com/aguslr/bluevanilla][BlueVanilla]]
