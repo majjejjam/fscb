@@ -6,7 +6,6 @@ COPY etc /etc
 
 RUN rpm-ostree override remove firefox firefox-langpacks gnome-terminal gnome-terminal-nautilus && \
     rpm-ostree install gnome-tweaks && \
-    /usr/bin/flatpak install --user --from https://nightly.gnome.org/repo/appstream/org.gnome.Prompt.Devel.flatpakref && \
     rm -rf /usr/share/gnome-shell/extensions/background-logo@fedorahosted.org && \
     sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=check/' /etc/rpm-ostreed.conf && \
     systemctl enable rpm-ostreed-automatic.timer && \
