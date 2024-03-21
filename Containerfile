@@ -4,7 +4,7 @@ FROM quay.io/fedora/fedora-silverblue:${FEDORA_MAJOR_VERSION}
 
 COPY rootfs/ /
 
-RUN rpm-ostree override remove firefox firefox-langpacks gnome-terminal gnome-terminal-nautilus && \
+RUN rpm-ostree override remove firefox firefox-langpacks openh264 mozilla-openh264 gnome-terminal gnome-terminal-nautilus && \
     rpm-ostree install gnome-tweaks && \
     systemctl enable dconf-update.service && \
     rm -rf /usr/share/gnome-shell/extensions/background-logo@fedorahosted.org && \
