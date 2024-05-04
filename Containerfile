@@ -5,15 +5,12 @@ FROM quay.io/fedora/fedora-silverblue:${FEDORA_MAJOR_VERSION}
 COPY rootfs/ /
 
 RUN sed -i 's/\.ext/.jxl/' /etc/dconf/db/local.d/01-background && \
-    sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=check/' /etc/rpm-ostreed.conf && \
-    printf '[Manager]/nDefaultTimeoutStopSec=15s\n' > /etc/systemd/user.conf && \
-    printf '[Manager]/nDefaultTimeoutStopSec=15s\n' > /etc/systemd/system.conf && \
     rm -rf /usr/share/gnome-shell/extensions/background-logo@fedorahosted.org && \
     systemctl enable dconf-update.service && \
     systemctl enable flatpak-add-flathub-repo.service && \
     systemctl enable flatpak-replace-fedora-apps.service && \
     systemctl enable flatpak-cleanup.timer && \
     systemctl enable rpm-ostreed-automatic.timer && \
-    rpm-ostree install gnome-tweaks && \
+    rpm-ostree install gnome-tweaks ; \
     rpm-ostree cleanup -m && \
     ostree container commit
